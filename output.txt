@@ -1,0 +1,24 @@
+Demo of the proteusTLS client for node.js
+Let's try the default chrome tls fingerprint first.
+ja3er.com responded:
+{
+  ja3_hash: 'b32309a26951912be7dba376398abc3b',
+  ja3: '771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-13-18-51-45-43-27-21,29-23-24,0'
+}
+Now reinit the client with a custom tls fingerprint.
+We will use 771,49195-49196-52393-49199-49200-52392-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-13,29-23-24,0 which is the same fingerprint that okhttp has.
+ja3er.com responded:
+{
+  ja3_hash: 'eaabed81520b23ea8a800b36bd7e359e',
+  ja3: '771,49195-49196-52393-49199-49200-52392-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-13,29-23-24,0'
+}
+This time we will test the custom header order that can be set.
+using postman-echo.com to verify, we get the header order:
+{
+  first: 'header',
+  and: 'some',
+  more: 'headers',
+  that: 'are',
+  in: 'correct order'
+}
+For more information don't hesitate to contact me on discord: @franz#0666 or twitter: @canvasfp.
